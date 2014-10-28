@@ -1,0 +1,24 @@
+﻿.numberContainer
+{
+}
+.numberField
+{
+    width:31px;
+    height:52px;
+    float:left;
+}
+.numberPart
+{
+    width:31px;
+    height:26px;
+}
+.numberLabel
+{
+    display: none;
+    height: 26px;
+}
+.numberLabel img
+{
+    width:100%;
+    height:100%;
+}

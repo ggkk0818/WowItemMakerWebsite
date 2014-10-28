@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WOWItemMaker</title>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <meta name="Keywords" content="wowitemmaker,itemmaker,wowitemmaker2" />
+    <meta name="Description" content="魔兽世界物品制作器" />
+    <meta name="author" content="ggkk0818@sina.com" />
+    <meta name="Robots" content="all"/>
+    <style type="text/css">
+        body
+        {
+            padding: 0;
+            margin: 0;
+        }
+        #cpInfoDiv a:link, #cpInfoDiv a:visited, #cpInfoDiv a:hover
+        {
+            color:#cccccc;
+            text-decoration:underline;
+        }
+        #mainDiv a:link, #mainDiv a:visited, #mainDiv a:hover
+        {
+            color:#672300;
+            text-decoration:none;
+        }
+        .clear
+        {
+            clear:both;
+        }
+    </style>
+</head>
+<body style="background-color:#ededed;">
+    <div id="mainDiv" style="width: 259px; margin: 0 auto; background-color:#ffffff; padding:25px 50px; border:1px solid #e1bf14; display:none;">
+        <img id="logoImg" alt="" src="img/logo.png" style="margin-left:25px; display:block; width:209px;" />
+        <span id="textSpan" style="float:right; color:#f8dd57;margin-right:25px;">Coming soon...</span>
+        <br class="clear" /><br class="clear" />
+        <div style="height:25px;color:#672300;margin-top:20px;">
+            <a href="download/WOWItemMaker1.71.rar"><img alt="" src="img/winrar.jpg" style="height:25px;border:0;display:block;float:left;" /><span style="display:block;cursor:pointer; line-height:20px;margin:5px 0 0 5px;float:left;">WOWItemMaker1.71(0.6MB)</span></a>
+        </div>
+        <div style="height:25px;color:#672300;margin-top:10px;margin-left:5px;">
+            <a href="download/manual.doc"><img alt="" src="img/word.jpg" style="height:25px;border:0;display:block;float:left;" /><span style="display:block;cursor:pointer; line-height:20px;margin:5px 0 0 5px;float:left;">1.70使用说明(0.2MB)</span></a>
+        </div>
+        <div style="height:25px;color:#672300;margin-top:10px;">
+            <a href="download/WOWItemMaker2beta2.rar"><img alt="" src="img/winrar.jpg" style="height:25px;border:0;display:block;float:left;" /><span style="display:block;cursor:pointer; line-height:20px;margin:5px 0 0 5px;float:left;">WOWItemMaker2beta2(1.3MB)</span></a>
+        </div>
+    </div>
+    <div id="cpInfoDiv" style="color:#cccccc; width: 800px; margin: 0 auto; text-align:center; font-size:12px; margin-top:20px;">Copyright © 2012 www.wowitemmaker.com. All Rights Reserved&nbsp;<a href="http://www.miibeian.gov.cn" target="_blank">京ICP备09113923号</a>&nbsp;&nbsp;京公网安备110108000146号</div>
+    <script language="javascript" type="text/javascript">
+        $("#mainDiv").css("margin-top", $(window).height() / 2 - $("#mainDiv").outerHeight() / 2);
+//        $("#mainDiv").animate({ opacity: 1 }, 1000);
+        $("#mainDiv").fadeIn(1000);
+        $("#logoImg").animate({ marginLeft: 0 }, 1000);
+        $("#textSpan").animate({ marginRight: 0 }, 1000);
+    </script>
+</body>
+</html>

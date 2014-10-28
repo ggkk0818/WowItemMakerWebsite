@@ -1,0 +1,171 @@
+﻿.content
+{
+    width:950px;
+    margin:5px auto;
+    position:relative;
+}
+.fliped
+{
+	-webkit-transform: rotateY(0deg) scale(1,1);
+	z-index:1;
+	opacity:1;
+}
+.unfliped
+{
+	-webkit-transform: rotateY(180deg) scale(1,1);
+	z-index:0;
+	opacity:1;
+}
+.itemCover
+{
+    width:100%;
+    height:100%;
+    background-color:#ededed;
+}
+.item
+{
+    width:310px;
+    height:175px;
+    margin:0;
+    background-color:#ffffff;
+    border:1px solid #e1bf14;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.item .iContainer
+{
+    background-color:#ffffff;
+    position:relative;
+}
+.item .iHeader
+{
+    width:100%;
+    height:30px;
+    line-height:30px;
+    background-color:#f19941;
+    cursor:pointer;
+}
+.item .iHeader .iTitle
+{
+    color:#ffffff;
+    font-size:14px;
+    margin:0 5px;
+}
+.item .iContent
+{
+    padding:5px;
+}
+.item .exitFull
+{
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:0;
+    right:5px;
+    cursor:pointer;
+}
+.color_blue
+{
+    border:1px solid #1BA1E2;
+}
+.color_blue .iHeader
+{
+    background-color:#1BA1E2;
+}
+.color_ligntblue
+{
+    border:1px solid #4EB3B9;
+}
+.color_ligntblue .iHeader
+{
+    background-color:#4EB3B9;
+}
+.color_magenta
+{
+    border:1px solid #FF0097;
+}
+.color_magenta .iHeader
+{
+    background-color:#FF0097;
+}
+.color_purple
+{
+    border:1px solid #6E155F;
+}
+.color_purple .iHeader
+{
+    background-color:#6E155F;
+}
+.color_lime
+{
+    border:1px solid #8CBF26;
+}
+.color_lime .iHeader
+{
+    background-color:#8CBF26;
+}
+.color_brown
+{
+    border:1px solid #A05000;
+}
+.color_brown .iHeader
+{
+    background-color:#A05000;
+}
+.color_pink
+{
+    border:1px solid #E671BB;
+}
+.color_pink .iHeader
+{
+    background-color:#E671BB;
+}
+.color_red
+{
+    border:1px solid #E51400;
+}
+.color_red .iHeader
+{
+    background-color:#E51400;
+}
+.color_green
+{
+    border:1px solid #393;
+}
+.color_green .iHeader
+{
+    background-color:#393;
+}
+.color_indigoblue
+{
+    border:1px solid #034888;
+}
+.color_indigoblue .iHeader
+{
+    background-color:#034888;
+}
+.color_purple2
+{
+    border:1px solid #5859B9;
+}
+.color_purple2 .iHeader
+{
+    background-color:#5859B9;
+}
+.color_teal2
+{
+    border:1px solid #D54D34;
+}
+.color_teal2 .iHeader
+{
+    background-color:#D54D34;
+}
+.color_dark
+{
+    border:1px solid #260930;
+}
+.color_dark .iHeader
+{
+    background-color:#260930;
+}

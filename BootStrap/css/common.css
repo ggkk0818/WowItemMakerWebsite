@@ -1,0 +1,14 @@
+﻿body {
+    margin:0;
+    padding:0;
+}
+hr {
+    margin:50px auto;
+}
+.footer {
+    color:#cccccc;
+}
+.footer a:link, .footer a:visited, .footer a:hover {
+    color: #cccccc;
+    text-decoration: underline;
+}

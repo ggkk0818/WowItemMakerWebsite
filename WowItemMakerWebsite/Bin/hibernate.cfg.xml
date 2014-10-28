@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+This template was written to work with NHibernate.Test.
+Copy the template to your NHibernate.Test project folder and rename it in hibernate.cfg.xml and change it 
+for your own use before compile tests in VisualStudio.
+-->
+<!-- This is the System.Data.dll provider for SQL Server -->
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+	<session-factory name="NHibernate.Test">
+		<property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+		<property name="connection.connection_string">
+      Server=127.0.0.1;initial catalog=SPKNG;User Id=sa;Password=gy79984;Min Pool Size=5;Max Pool Size=10;Connect Timeout=30
+      <!--Server=hds-003.hichina.com;initial catalog=hds0030569_db;User Id=hds0030569;Password=c5p9s7m9;Min Pool Size=5;Max Pool Size=10;Connect Timeout=30-->
+    </property>
+    <property name="adonet.batch_size">10</property>
+		<property name="show_sql">false</property>
+		<property name="dialect">NHibernate.Dialect.MsSql2000Dialect</property>
+		<property name="command_timeout">60</property>
+		<property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+	</session-factory>
+</hibernate-configuration>

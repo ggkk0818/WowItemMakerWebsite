@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>常见问题 - WOWItemMaker</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/faq.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="masthead">
+            <h3 class="muted">
+                <img src="img/logo.png" />
+            </h3>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li><a href="./">首页</a></li>
+                            <li><a href="download/">下载</a></li>
+                            <li class="active"><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq">
+            <h3>软件无法运行？</h3>
+            <p>1.72版本软件需要.NET Frameword 3.5运行环境，win7/win8自带，vista或更早版本windows系统请<a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=21" target="_blank" title="从微软下载中心下载 Microsoft .NET Framework 3.5">下载该安装包手动安装</a>。</p>
+            <p>2.0版本需要.NET Frameword 4.0运行环境，win8自带，win7或更早版本windows系统<a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=17718" target="_blank" title="从微软下载中心下载 Microsoft .NET Framework 4">点击这里</a>下载安装包。</p>
+        </div>
+        <hr />
+        <div class="faq">
+            <h3>如何填写连接信息？</h3>
+            <p>
+                在服务端根目录找到配置文件（扩展名为.conf），使用记事本打开，搜索以下任意一行文本内容：<br />
+                LoginDatabaseInfo<br />
+                WorldDatabaseInfo<br />
+                CharacterDatabaseInfo
+            </p>
+            <p>
+                应找到如下图所示的文本内容<br />
+                <img src="img/faq1.jpg" />
+            </p>
+            <p>
+                填写用户名和密码之后，展开数据库下拉菜单，稍等片刻会看到所有数据库名称列表，选择world或mangos（或相似名称），也可以直接在配置文件中获取数据库名称。<br />
+                <img src="img/faq2.jpg" />
+            </p>
+        </div>
+        <hr />
+        <div class="faq">
+            <h3>添加/修改/删除物品后，为何没有生效？</h3>
+            <p>修改物品信息之后，必须重新启动服务端才能生效。</p>
+            <p>在大灾变及以上版本的服务端中，默认情况下无法新建物品，而且修改已有物品之后在物品描述中不会显示更改，但装备后有实际效果。</p>
+        </div>
+        <hr style="margin-bottom:20px;" />
+        <div class="footer">
+            Copyright © 2012-2013 www.wowitemmaker.com. All Rights Reserved&nbsp;<a href="http://www.miibeian.gov.cn" target="_blank">京ICP备09113923号</a>&nbsp;&nbsp;京公网安备110108000146号
+        </div>
+    </div>
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
+</body>
+</html>

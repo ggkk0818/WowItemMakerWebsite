@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="default.master.cs" Inherits="_default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WOWItemMaker</title>
+    <meta content="IE=9.0000" http-equiv="X-UA-Compatible" />
+    <link type="text/css" rel="Stylesheet" href="css/default.css" />
+    <script type="text/javascript" language="javascript" src="<%=path %>js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="<%=path %>js/jquery.animate-colors.js"></script>
+    <!--[if IE 6]>
+    <script src="<%=path %>js/DD_belatedPNG.js" mce_src="<%=path %>js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">     
+        DD_belatedPNG.fix('.fixpng');   
+    </script>
+    <script type="text/javascript">
+    //<![CDATA[
+    try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
+    //]]>
+    </script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!--[if lt IE 8]> 
+        <div id="ie6CountDownDiv" style=' width:950px; height: 42px; margin:0 auto; display:none;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="<%=path %>img/ie6CountDown.jpg" border="0" height="42" width="950" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div> 
+        <script language="javascript" type="text/javascript">
+            $("#ie6CountDownDiv").delay(1000).slideDown("normal");
+        </script>
+    <![endif]-->
+    <div class="header">
+        <div class="logo"><a href="<%=path %>"><img alt="" class="fixpng" src="<%=path %>img/logo.png" style="border:0;" /></a></div>
+        <div class="info"><a href="javascript:void(0);">登录</a>&nbsp;<a href="javascript:void(0);">注册</a></div>
+        <br class="clear" />
+    </div>
+    <div class="nav">
+        <div class="navItem">首页</div>
+        <div class="navItem">文档</div>
+        <div class="navItem">下载</div>
+        <div class="navItem">支持</div>
+        <div class="search fixpng">
+            <input type="text" />
+            <div class="searchBtn"><img alt="" class="fixpng" src="<%=path %>img/search.png" /></div>
+            <br class="clear" />
+        </div>
+        <br class="clear" />
+    </div>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+    <div class="footer">
+        Copyright © 2012 www.wowitemmaker.com. All Rights Reserved&nbsp;<a href="http://www.miibeian.gov.cn" target="_blank">京ICP备09113923号</a>&nbsp;&nbsp;京公网安备110108000146号
+    </div>
+    <div class="goTop" style="display:none;"><img alt="" src="<%=path %>img/goTop.png" class="fixpng" style="width:100%;height:100%;" /></div>
+    <script language="javascript" type="text/javascript">
+        $(".nav .navItem").on("mouseenter", function () {
+            $(this).stop(true, false).animate({ backgroundColor: "#f19941", color: "#ffffff" }, 250);
+        });
+        $(".nav .navItem").on("mouseleave", function () {
+            $(this).stop(true, false).animate({ backgroundColor: "#ffffff", color: "#df8d3c" }, 250);
+        });
+        $(".nav .search .searchBtn").on("mouseenter", function () {
+            $(this).stop(true, false).animate({ backgroundColor: "#f19941" }, 250);
+        });
+        $(".nav .search .searchBtn").on("mouseleave", function () {
+            $(this).stop(true, false).animate({ backgroundColor: "#df8d3c" }, 250);
+        });
+        $(".nav .search input").focus(function () {
+            $(this).parent().animate({ backgroundColor: "#ffffff" }, 250);
+        });
+        $(".nav .search input").blur(function () {
+            if ($(this).val() == '') {
+                $(this).parent().animate({ backgroundColor: "#ffb266" }, 250);
+            }
+        });
+        var onTopDivMouseEnter = function () {
+            $(this).stop(true, false).fadeTo("fast", 1);
+        };
+        var onTopDivMouseOut = function () {
+            $(this).stop(true, false).fadeTo("fast", 0.6);
+        };
+        $(window).scroll(function () {
+            var scroll = Math.max($(document.body).scrollTop(), $(document.documentElement).scrollTop());
+            if (scroll > 0 && parseFloat($(".goTop").css("opacity")) < 0.6 ||
+                    scroll > 0 && $(".goTop").css("display") == "none") {
+                $(".goTop").stop(true, false).fadeTo("slow", 0.6, function () {
+                    $(this).on("mouseenter", onTopDivMouseEnter);
+                    $(this).on("mouseout", onTopDivMouseOut);
+                });
+            }
+            else if (scroll == 0) {
+                $(".goTop").off("mouseenter", onTopDivMouseEnter);
+                $(".goTop").off("mouseout", onTopDivMouseOut);
+                $(".goTop").stop(true, false).fadeOut("normal", function () { $(this).hide(); });
+            }
+        });
+        $(".goTop").click(function () {
+            $(document.documentElement).stop(true, true).animate({ scrollTop: 0 }, "slow");
+            $(document.body).stop(true, true).animate({ scrollTop: 0 }, "slow");
+        });
+    </script>
+</body>
+</html>

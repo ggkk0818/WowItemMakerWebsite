@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.uploadify.v2.1.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/swfobject.js"></script>
+    <link href="css/uploadify.css" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+<div class="wrapper">
+        <b>uploadify 示例程序</b>
+        <div id="fileInput1">
+        </div>
+        <a href="javascript:$('#fileInput1').uploadifyUpload()" kesrc="javascript:$('#fileInput1').uploadifyUpload()">上传</a> | <a href="javascript:$('#fileInput1').uploadifyClearQueue()"kesrc="javascript:$('#fileInput1').uploadifyClearQueue()">
+            取消上传</a>
+</div>
+<script language="javascript" type="text/javascript">
+ $("#fileInput1").uploadify({
+        'uploader': 'uploadify.swf',
+        'method': 'POST',
+        'script': 'uploadfile.aspx',
+        'cancelImg': 'img/cancel.png',
+        'auto': false,
+        'multi': true,
+    });
+</script>
+</body>
+</html>

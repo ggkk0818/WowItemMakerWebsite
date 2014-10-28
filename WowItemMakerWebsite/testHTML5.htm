@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<title>Flip Text</title>
+<style>
+*{
+    margin:0px;
+    padding:0px;
+}
+#cover{
+    position:absolute;
+    width:100%;
+    height:100%;
+    min-width: 768px;
+    overflow: hidden;
+}
+#coverText {
+    position: absolute;
+    left: 18%;
+    top: 30%;
+	width:64%;
+	text-align:center;
+}
+#coverText .container
+{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+#coverText .container .item
+{
+    position:absolute;
+    background-color:#000000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+	-webkit-animation-time-function: linear;
+}
+#coverText .container .fliped
+{
+	-webkit-transform: rotateY(0deg) scale(1,1);
+	z-index:1;
+	opacity:1;
+}
+#coverText .container .unfliped
+{
+	-webkit-transform: rotateY(180deg) scale(1,1);
+	z-index:0;
+	opacity:1;
+}
+#welcomeStr1,#welcomeStr2 {
+	height: 86px;
+	font-size: 64px;
+	line-height: 86px;
+	letter-spacing: 2px;
+	color: white;
+	font-family:"Courier New";
+	-webkit-animation-time-function: linear;
+}
+
+@-webkit-keyframes flip1 {
+	0% {
+		-webkit-transform: rotateY(0deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+	}
+	50% {
+		-webkit-transform: rotateY(90deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+    }
+	51% {
+		-webkit-transform: rotateY(90deg) scale(1,1);
+		z-index:0;
+		opacity:1;
+    }
+	100% {
+		-webkit-transform: rotateY(180deg) scale(1,1);
+		z-index:0;
+		opacity:1;
+	}
+}
+@-webkit-keyframes unflip1 {
+	0% {
+		-webkit-transform: rotateY(180deg) scale(1,1);
+		z-index:0;
+		opacity:1;
+	}
+	50% {
+		-webkit-transform: rotateY(270deg) scale(1,1);
+		z-index:0;
+		opacity:1;
+	}
+	51% {
+		-webkit-transform: rotateY(270deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+	}
+	100% {
+		-webkit-transform: rotateY(360deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+	}
+}
+@-webkit-keyframes flip2 {
+	0% {
+		-webkit-transform: rotateY(180deg) scale(1,1);
+		z-index:0;
+		opacity:1;
+	}
+	50% {
+		-webkit-transform: rotateY(270deg) scale(1,1);
+		z-index:0;
+		opacity:1;
+    }
+	51% {
+		-webkit-transform: rotateY(270deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+    }
+	100% {
+		-webkit-transform: rotateY(360deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+	}
+}
+@-webkit-keyframes unflip2 {
+	0% {
+		-webkit-transform: rotateY(0deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+	}
+	50% {
+		-webkit-transform: rotateY(90deg) scale(1,1);
+		z-index:1;
+		opacity:1;
+	}
+	51% {
+		-webkit-transform: rotateY(90deg) scale(1,1);
+	    z-index:0;
+		opacity:1;
+	}
+	100% {
+		-webkit-transform: rotateY(180deg) scale(1,1);
+		z-index:0;
+		opacity:1;
+	}
+}
+</style>
+<script type="text/javascript">
+    flip = function (element, flipName, flipTime, unflipName, unflipTime) {
+        if (!element) {
+            return;
+        }
+        element.style.webkitAnimation = "" + flipName + " " + flipTime;
+        return $(element).bind('webkitAnimationEnd', function () {
+            switch (element.style.webkitAnimationName) {
+                case flipName:
+                    return element.style.webkitAnimation = "" + unflipName + " " + unflipTime; break;
+                case unflipName:
+                    return element.style.webkitAnimation = "" + flipName + " " + flipTime; break;
+            }
+        });
+    };
+
+    $(function () {
+        //        flip($("#item1")[0], 'flip1', '1.5s', 'unflip1', '1.5s');
+        //        flip($("#item2")[0], 'flip2', '1.5s', 'unflip2', '1.5s');
+        $("#item1").bind("click", function () {
+            $("#item1")[0].style.webkitAnimation = "flip1 1.5s";
+            $("#item2")[0].style.webkitAnimation = "flip2 1.5s";
+        });
+        $("#item2").bind("click", function () {
+            $("#item1")[0].style.webkitAnimation = "unflip1 1.5s";
+            $("#item2")[0].style.webkitAnimation = "unflip2 1.5s";
+        });
+        $("#item1,#item2").bind("webkitAnimationEnd", function () {
+            if ($(this).hasClass("fliped")) {
+                $(this).removeClass("fliped");
+                $(this).addClass("unfliped");
+            }
+            else {
+                $(this).removeClass("unfliped");
+                $(this).addClass("fliped");
+            }
+        });
+    });
+</script>
+</head>
+<body>
+<div id="cover">
+	<div id="coverText">
+		<div class="container">
+            <div id="item1" class="item fliped"><div style="background:#aaaaaa;"><img alt="" src="img/logo.png" /></div></div>
+            <div id="item2" class="item unfliped"><div style="background:#eeeeee;"><img alt="" src="img/logo.png" /></div></div>
+        </div>
+	</div>
+</div>
+</body>

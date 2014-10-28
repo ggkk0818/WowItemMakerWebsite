@@ -1,0 +1,4 @@
+﻿User-agent: *  
+Disallow: /css/ 
+Disallow: /upload/
+Disallow: /js/  

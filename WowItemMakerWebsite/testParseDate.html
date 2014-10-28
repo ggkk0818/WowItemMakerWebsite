@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        function parseDate(str) {
+            var match = str.match(/^(\d{4})(\d{2})(\d{2})$/);
+            var date = new Date();
+            if (match != null) {
+                date.setFullYear(parseInt(match[1]));
+                date.setMonth(parseInt(match[2]) - 1);
+                date.setDate(parseInt(match[3]) + 2);
+            }
+            return date;
+        }
+        alert(parseDate("20130130"));
+    </script>
+</body>
+</html>
