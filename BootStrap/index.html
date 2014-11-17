@@ -15,48 +15,41 @@
 </head>
 <body>
     <div class="container">
-        <div class="masthead">
-            <h3 class="muted">
-                <img src="img/logo.png" />
-            </h3>
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <ul class="nav">
-                            <li class="active"><a href="javascript:void(0);">首页</a></li>
-                            <li><a href="download/">下载</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li>
-                                <button id="start-togetherjs" type="button" class="btn"
-                                    data-end-togetherjs-html="停止互动" 
-                                    title="借助最新的TogetherJS技术与其他访客聊天或共同浏览页面内容">与其他浏览者互动</button>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="logo">
+            <img src="img/logo.png" />
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="javascript:void(0);">首页</a></li>
+                        <li><a href="download/">下载</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
         <div style="margin:50px auto;text-align:center;">
-            <h1 style="font-size:50px;line-height:1;">WOWItemMaker2.0 beta2</h1>
+            <h1 style="font-size:50px;line-height:1;">WOWItemMaker2.0 beta3</h1>
             <p style="font-size:24px;line-height:1.25;">全新界面和高兼容性架构，适用于大灾变及以上版本服务端，并向下兼容。</p>
-            <a href="download/WOWItemMaker2beta2.rar" class="btn btn-large btn-success">现在下载</a>
+            <a href="download/WOWItemMaker2beta3.rar" class="btn btn-lg btn-success">现在下载</a>
         </div>
         <hr />
-        <div class="row-fluid">
-            <div class="span4">
+        <div class="row">
+            <div class="col-xs-4">
                 <h3>WOWItemMaker1.72</h3>
-                <p>适用于3.13-3.35服务端，提供问号补丁、物品搜索等功能。</p>
-                <p><a href="download/WOWItemMaker1.72.rar" class="btn">下载</a></p>
+                <p style="min-height:40px;">适用于3.13-3.35服务端，提供问号补丁、物品搜索等功能。</p>
+                <p><a href="download/WOWItemMaker1.72.rar" class="btn btn-default">下载</a></p>
             </div>
-            <div class="span4">
+            <div class="col-xs-4">
                 <h3>1.72版本使用说明</h3>
-                <p>获取连接信息的教程、软件的操作说明及常见问题解答。</p>
-                <p><a href="download/manual.doc" class="btn">下载</a></p>
+                <p style="min-height:40px;">获取连接信息的教程、软件的操作说明及常见问题解答。</p>
+                <p><a href="download/manual.doc" class="btn btn-default">下载</a></p>
             </div>
-            <div class="span4">
+            <div class="col-xs-4">
                 <h3>更多帮助</h3>
-                <p>浏览在线FAQ获取常见问题的解决方法。</p>
-                <p><a href="faq.html" class="btn">查看</a></p>
+                <p style="min-height:40px;">浏览在线FAQ获取常见问题的解决方法。</p>
+                <p><a href="faq.html" class="btn btn-default">查看</a></p>
             </div>
         </div>
         <hr style="margin-bottom:20px;" />
@@ -64,9 +57,5 @@
             Copyright © 2012-2013 www.wowitemmaker.com. All Rights Reserved&nbsp;<a href="http://www.miibeian.gov.cn" target="_blank">京ICP备09113923号</a>&nbsp;&nbsp;京公网安备110108000146号
         </div>
     </div>
-    <script src="https://togetherjs.com/togetherjs-min.js"></script>
-    <script type="text/javascript">
-        $("#start-togetherjs").click(TogetherJS);
-    </script>
 </body>
 </html>
