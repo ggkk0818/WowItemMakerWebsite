@@ -5,6 +5,13 @@
 hr {
     margin:50px auto;
 }
+.container > .navbar-header {
+    margin-left: 0;
+    margin-right: 0;
+}
+.container > .navbar-header > .navbar-nav{
+    margin:0;
+}
 .footer {
     color:#cccccc;
 }
