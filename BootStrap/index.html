@@ -1,62 +1,110 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ItemMaker物品制作器</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Keywords" content="wowitemmaker,itemmaker,wowitemmaker2" />
     <meta name="Description" content="ItemMaker物品制作器" />
     <meta name="author" content="ggkk0818@sina.com" />
-    <meta name="Robots" content="all"/>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <meta name="Robots" content="all" />
+    <link href="bootstrap/css/toggle-bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap/css/toggle-bootstrap-dark.min.css" rel="stylesheet" />
+    <link
+      href="bootstrap/css/toggle-bootstrap-print.min.css"
+      rel="stylesheet"
+    />
+    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js"></script>
-</head>
-<body>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body class="bootstrap">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="img/logo.png" alt="" loading="lazy">
+            </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="javascript:void(0);"
+                  >首页<span class="sr-only">(当前)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="download/">下载</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://github.com/ggkk0818/wowitemmaker"
+                  ><i class="bi bi-github"></i>GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="container">
-        <div class="logo">
-            <img src="img/logo.png" />
+      <div style="margin: 50px auto; text-align: center">
+        <h1 style="font-size: 50px; line-height: 1">WOWItemMaker2.0 beta3</h1>
+        <p style="font-size: 24px; line-height: 1.25">
+          全新界面和高兼容性架构，适用于大灾变及以上版本服务端，并向下兼容。
+        </p>
+        <a href="download/WOWItemMaker2beta3.rar" class="btn btn-lg btn-success"
+          >现在下载</a
+        >
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <h3>WOWItemMaker1.73</h3>
+          <p style="min-height: 40px">
+            适用于3.13-3.35服务端，提供问号补丁、物品搜索等功能。
+          </p>
+          <p>
+            <a href="download/WOWItemMaker1.73.rar" class="btn btn-info"
+              >下载</a
+            >
+          </p>
         </div>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="javascript:void(0);">首页</a></li>
-                        <li><a href="download/">下载</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="https://github.com/ggkk0818/wowitemmaker">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div style="margin:50px auto;text-align:center;">
-            <h1 style="font-size:50px;line-height:1;">WOWItemMaker2.0 beta3</h1>
-            <p style="font-size:24px;line-height:1.25;">全新界面和高兼容性架构，适用于大灾变及以上版本服务端，并向下兼容。</p>
-            <a href="download/WOWItemMaker2beta3.rar" class="btn btn-lg btn-success">现在下载</a>
+        <div class="col-lg-4 col-sm-12">
+          <h3>1.72版本使用说明</h3>
+          <p style="min-height: 40px">
+            获取连接信息的教程、软件的操作说明及常见问题解答。
+          </p>
+          <p><a href="download/manual.doc" class="btn btn-info">下载</a></p>
         </div>
-        <hr />
-        <div class="row-fluid">
-            <div class="col-lg-4 col-sm-12">
-                <h3>WOWItemMaker1.73</h3>
-                <p style="min-height:40px;">适用于3.13-3.35服务端，提供问号补丁、物品搜索等功能。</p>
-                <p><a href="download/WOWItemMaker1.73.rar" class="btn btn-default">下载</a></p>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <h3>1.72版本使用说明</h3>
-                <p style="min-height:40px;">获取连接信息的教程、软件的操作说明及常见问题解答。</p>
-                <p><a href="download/manual.doc" class="btn btn-default">下载</a></p>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <h3>更多帮助</h3>
-                <p style="min-height:40px;">浏览在线FAQ获取常见问题的解决方法。</p>
-                <p><a href="faq.html" class="btn btn-default">查看</a></p>
-            </div>
+        <div class="col-lg-4 col-sm-12">
+          <h3>更多帮助</h3>
+          <p style="min-height: 40px">浏览在线FAQ获取常见问题的解决方法。</p>
+          <p><a href="faq.html" class="btn btn-info">查看</a></p>
         </div>
-        <hr style="margin-bottom:20px;" />
-        <div class="footer">
-            Copyright © 2012-2021 www.wowitemmaker.com. All Rights Reserved&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank">京ICP备09113923号-2</a>&nbsp;&nbsp;京公网安备110108000146号
-        </div>
+      </div>
+      <hr style="margin-bottom: 20px" />
+      <div class="footer">
+        Copyright © 2012-2021 www.wowitemmaker.com. All Rights Reserved&nbsp;<a
+          href="https://beian.miit.gov.cn/"
+          target="_blank"
+          >京ICP备09113923号-2</a
+        >&nbsp;&nbsp;京公网安备110108000146号
+      </div>
     </div>
-</body>
+  </body>
 </html>

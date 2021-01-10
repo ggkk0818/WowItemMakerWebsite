@@ -4,44 +4,77 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>下载 - ItemMaker物品制作器</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="../bootstrap/css/toggle-bootstrap.min.css" rel="stylesheet" />
+    <link href="../bootstrap/css/toggle-bootstrap-dark.min.css" rel="stylesheet" />
+    <link
+      href="../bootstrap/css/toggle-bootstrap-print.min.css"
+      rel="stylesheet"
+    />
+    <link href="../bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="../css/common.css" rel="stylesheet" />
     <link href="../css/download.css" rel="stylesheet" />
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/common.js"></script>
 </head>
-<body>
+<body class="bootstrap">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../img/logo.png" alt="" loading="lazy">
+            </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../"
+                  >首页</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="javascript:void(0);">下载<span class="sr-only">(当前)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://github.com/ggkk0818/wowitemmaker"
+                  ><i class="bi bi-github"></i>GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="container">
-        <div class="logo">
-            <img src="../img/logo.png" />
-        </div>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../">首页</a></li>
-                        <li class="active"><a href="../download/">下载</a></li>
-                        <li><a href="../faq.html">FAQ</a></li>
-                        <li><a href="https://github.com/ggkk0818/wowitemmaker">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
         <div class="dlInfo">
-            <h3>WOWItemMaker2.0 beta3 <small>2014-10-12</small></h3>
+            <h3>WOWItemMaker2.0 beta3 <small class="text-muted">2014-10-12</small></h3>
             <p>全新界面和高兼容性架构，适用于大灾变及以上版本服务端，并向下兼容。</p>
-            <a href="WOWItemMaker2beta3.rar" class="btn btn-default">下载</a>
+            <a href="WOWItemMaker2beta3.rar" class="btn btn-info">下载</a>
         </div>
         <hr />
         <div class="dlInfo">
-            <h3>WOWItemMaker1.73 <small>2014-12-26</small></h3>
+            <h3>WOWItemMaker1.73 <small class="text-muted">2014-12-26</small></h3>
             <p>适用于3.13-3.35服务端，提供问号补丁、物品搜索等功能。</p>
-            <a href="WOWItemMaker1.73.rar" class="btn btn-default">下载</a>
+            <a href="WOWItemMaker1.73.rar" class="btn btn-info">下载</a>
         </div>
         <hr />
         <div class="dlInfo">
-            <h3>1.72版本使用说明 <small>2011-7-21</small></h3>
+            <h3>1.72版本使用说明 <small class="text-muted">2011-7-21</small></h3>
             <p>获取连接信息的教程、软件的操作说明及常见问题解答。</p>
-            <a href="manual.doc" class="btn btn-default">下载</a>
+            <a href="manual.doc" class="btn btn-info">下载</a>
         </div>
         <hr style="margin-bottom:20px;" />
         <div class="footer">
